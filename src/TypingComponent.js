@@ -5,10 +5,11 @@ import "./TypingComponent.css";
 const TypingComponent = () => {
   useEffect(() => {
     const stringArray = [
-      "Lorem ipsum dummy text blabla",
-      "Sebastian Gomez thinks coding is cool",
-      "I like turtles",
-      "I want to learn react",
+      "This website is powered by react!",
+      "Just a friendly data analyst :)",
+      "Anticipated 2024 UNLV graduate!",
+      "Why are assembly programmers always soaking wet?",
+      "They work below C-level.",
     ];
     var i = 0;
     let currentString = "|";
@@ -69,8 +70,14 @@ const TypingComponent = () => {
   }, []); // Empty dependency array to run the effect only once when the component mounts
 
   return (
-    <div className="Typing_animation">
-      <p id="demo"></p>
+    <div>
+      <p className="hook">Hi, I’m Sebastian Gomez!</p>
+      <p className="Typing_animation" id="demo"></p>
+      <p className="Paragraph">
+        Welcome! I'm a dedicated Data Integrity Specialist based in Las Vegas,
+        NV. With a rich background in software and data management, I've
+        accumulated valuable experience over the past 2 years.
+      </p>
     </div>
   );
 };

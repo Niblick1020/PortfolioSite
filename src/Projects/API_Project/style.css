@@ -1,0 +1,25 @@
+.Page-space {
+  max-width: 800;
+  padding: 20px 15% 20px 15%;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th,
+td {
+  border: 1px solid black;
+  padding: 5px;
+  color: white; /* Set text color to white */
+}
+
+th {
+  background-color: #f2f2f2; /* Set light gray background for header cells */
+  border-color: black; /* Set border color for header cells */
+  color: black; /* Set text color to white */
+}
+
+.top_padding {
+  margin-top: 32px;
+}

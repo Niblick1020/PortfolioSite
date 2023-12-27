@@ -19,7 +19,7 @@ const experiences = [
     date: "Sep 2019",
     title: "Started Attending UNLV",
     description: `This is where it began taking more complicated classes and learning more complex computer science 
-    skills such as data structures, object oriented programming, physics and assembly etc. `,
+    skills such as data structures, object oriented programming, physics, assembly etc. `,
   },
   {
     date: "Oct 2020",
@@ -71,12 +71,36 @@ const Timeline = () => {
     <div>
       <h1 className="title"> Timeline</h1>
       {experiences.map((experience, index) => (
-        <div className="timeline-box" key={index}>
-          <div>{experience.date}</div>
-          <div style={{}}>
+        <div className="timeline-container" key={index}>
+          <div className="timeline-line"></div>
+          {/* This section is for the Date in phone view */}
+          <div
+            style={{
+              margin: "20% 26% 5% 26%",
+              fontSize: "26px",
+              background: "#33475b",
+              color: "aliceblue",
+              border: "20px solid #33475b",
+              borderRadius: "20px",
+              boxShadow: "5px 5px 10px rgba(0, 0, 0, 0.2)",
+            }}
+          >
+            {experience.date}
+          </div>
+          {/* This section is for the discription in phone view */}
+          <div
+            style={{
+              fontSize: "20px",
+              background: "#33475b",
+              color: "aliceblue",
+              border: "20px solid #33475b",
+              borderRadius: "20px",
+              boxShadow: "5px 5px 10px rgba(0, 0, 0, 0.2)",
+            }}
+          >
             <h3>{experience.title}</h3>
             <h5>{experience.subTitle}</h5>
-            <div className="phone-description">{experience.description}</div>
+            <div>{experience.description}</div>
           </div>
         </div>
       ))}
@@ -98,6 +122,8 @@ const Timeline = () => {
                 gridColumn: 3,
                 background: "#33475b",
                 margin: "0px 40% 0px 40%",
+                fontFamily:
+                  "'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif",
               }}
             ></div>
             <div
@@ -105,6 +131,9 @@ const Timeline = () => {
                 gridColumn: index % 2 === 0 ? 2 : 4,
                 gridRow: index + 1,
                 textAlign: index % 2 === 0 ? "right" : "left",
+                fontSize: "24px",
+                fontWeight: "bold",
+                textShadow: "1px 2px 6px rgba(0, 0, 0, 0.5)",
               }}
             >
               {experience.date}
@@ -113,6 +142,12 @@ const Timeline = () => {
               style={{
                 gridColumn: index % 2 === 0 ? 1 : 5,
                 gridRow: index + 1,
+                fontSize: "22px",
+                background: "#33475b",
+                color: "aliceblue",
+                border: "20px solid #33475b",
+                borderRadius: "20px",
+                boxShadow: "5px 5px 10px rgba(0, 0, 0, 0.2)",
               }}
             >
               <h3>{experience.title}</h3>

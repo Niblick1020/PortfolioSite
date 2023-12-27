@@ -2,6 +2,9 @@
 
 import React, { useState, useEffect, useRef } from "react";
 import { Link as ScrollLink } from "react-scroll";
+
+import { Link } from "react-router-dom";
+
 import "./Navigation.css";
 
 const animateDropdown = (
@@ -136,12 +139,12 @@ const Navigation = () => {
       <ul className="nav-list">
         <li className="nav-item">
           <ScrollLink to="home" smooth={true} duration={500}>
-            HOME
+            <Link to="/">HOME</Link>
           </ScrollLink>
         </li>
         <li className="nav-item">
           <ScrollLink to="timeline" smooth={true} duration={500}>
-            TIMELINE
+            <Link to="/">TIMELINE</Link>
           </ScrollLink>
         </li>
         {/* <li className="nav-item">
@@ -151,12 +154,12 @@ const Navigation = () => {
         </li> */}
         <li className="nav-item">
           <ScrollLink to="PROJECTS" smooth={true} duration={500}>
-            PROJECTS
+            <Link to="/">PROJECTS</Link>
           </ScrollLink>
         </li>
         <li className="nav-item">
           <ScrollLink to="CONTACT" smooth={true} duration={500}>
-            CONTACT
+            <Link to="/">CONTACT</Link>
           </ScrollLink>
         </li>
       </ul>

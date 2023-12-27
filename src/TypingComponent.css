@@ -1,4 +1,29 @@
+.hook {
+  text-align: left;
+  font-size: 34px;
+}
+
 .Typing_animation {
-  /* padding: 10px 20px 70px 20px; */
-  /* margin-bottom: 50px; */
+  font-size: 34px;
+  text-align: left;
+}
+.Paragraph {
+  font-size: 28px;
+  text-align: left;
+}
+
+@media only screen and (max-width: 768px) {
+  .hook {
+    text-align: center;
+    font-size: 34px;
+  }
+
+  .Typing_animation {
+    font-size: 34px;
+    text-align: left;
+  }
+  .Paragraph {
+    font-size: 28px;
+    text-align: center;
+  }
 }

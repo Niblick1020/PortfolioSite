@@ -1,3 +1,4 @@
+//Contact.js
 import React, { useState } from "react";
 import * as emailjs from "emailjs-com";
 import "./Contact.css";
@@ -56,7 +57,7 @@ export const ContactUs = () => {
           console.log(result.text);
           setFormdata({
             loading: false,
-            alertmessage: "SUCCESS! ,Thankyou for your messege",
+            alertmessage: "SUCCESS! ,Thank you for your message",
             variant: "success",
             show: true,
           });
@@ -81,65 +82,58 @@ export const ContactUs = () => {
   };
 
   return (
-    <HelmetProvider>
-      <Container>
-        <Helmet>
-          <meta charSet="utf-8" />
-          <title>{meta.title} | Contact</title>
-          <meta name="description" content={meta.description} />
-        </Helmet>
-        <h1 className="title">Contact Me</h1>
-        <div className="container-grid">
-          <div className="left-grid">
-            <p className="my-0">{formData.alertmessage}</p>
+    <section className="container-grid">
+      <title>{meta.title} | Contact</title>
 
-            <h3 className="color_sec py-4">Get in touch</h3>
-            <address></address>
-            <p>{contactConfig.description}</p>
+      <h1 className="title">Contact Me</h1>
+      <div className="left-grid">
+        <p>{formData.alertmessage}</p>
+        <h3>Get in touch</h3>
+        <p>{contactConfig.description}</p>
+      </div>
+      <div className="inputs">
+        <form onSubmit={handleSubmit}>
+          <div className="form-layout">
+            <input
+              className="name"
+              id="name"
+              name="name"
+              placeholder="Name"
+              value={formData.name || ""}
+              type="text"
+              required
+              onChange={handleChange}
+            />
+
+            <input
+              className="email"
+              id="email"
+              name="email"
+              placeholder="Email"
+              type="email"
+              value={formData.email || ""}
+              required
+              onChange={handleChange}
+            />
+            <textarea
+              className="message"
+              id="message"
+              name="message"
+              placeholder="Message"
+              rows="5"
+              value={formData.message}
+              onChange={handleChange}
+              required
+            ></textarea>
+            <br />
+
+            <button className="button" type="submit">
+              {formData.loading ? "Sending..." : "Send"}
+            </button>
           </div>
-          <div className="right-grid d-flex justify-content-center">
-            <form onSubmit={handleSubmit} className="contact__form  ">
-              <input
-                className="form-control"
-                id="name"
-                name="name"
-                placeholder="Name"
-                value={formData.name || ""}
-                type="text"
-                required
-                onChange={handleChange}
-              />
-
-              <input
-                className="form-control"
-                id="email"
-                name="email"
-                placeholder="Email"
-                type="email"
-                value={formData.email || ""}
-                required
-                onChange={handleChange}
-              />
-              <textarea
-                className="form-control"
-                id="message"
-                name="message"
-                placeholder="Message"
-                rows="5"
-                value={formData.message}
-                onChange={handleChange}
-                required
-              ></textarea>
-              <br />
-
-              <button className="button" type="submit">
-                {formData.loading ? "Sending..." : "Send"}
-              </button>
-            </form>
-          </div>
-        </div>
-      </Container>
+        </form>
+      </div>
       <div className={formData.loading ? "loading-bar" : "d-none"}></div>
-    </HelmetProvider>
+    </section>
   );
 };

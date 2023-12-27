@@ -32,15 +32,18 @@ const FaceComponent = () => {
     <div className="Container">
       <div
         style={{
+          position: "relative",
           zIndex: 2,
           transform: `rotate(${rotation}deg)`,
-          transformOrigin: "50% 30% ",
+          transformOrigin: "50% 17em ",
         }}
       >
         <img className="face-image" src={face} alt="Face with no eyes" />
         <EyesComponent />
       </div>
-      <BodyComponent />
+      <div style={{ zIndex: 1, position: "relative" }}>
+        <BodyComponent />
+      </div>
     </div>
   );
 };
@@ -96,7 +99,7 @@ const EyesComponent = () => {
 
 const BodyComponent = () => {
   return (
-    <div style={{ zIndex: 1 }}>
+    <div>
       <img className="body-image" src={body} alt="body" />
     </div>
   );

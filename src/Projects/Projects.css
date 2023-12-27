@@ -1,0 +1,71 @@
+/* src/Project/Projects.css */
+.title {
+  font-size: 30px;
+  text-align: center;
+}
+
+.Contaner {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  background: #33475b;
+  border: 8px solid #33475b;
+  border-radius: 15px;
+  max-width: 95%;
+  align-items: center;
+  margin: auto;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.image {
+  grid-column: 1;
+  grid-row: 1;
+  max-width: 100%;
+  border-radius: 15px;
+}
+
+.about_api {
+  color: aliceblue;
+  grid-column: 2;
+  grid-row: 1;
+  padding: 5% 10% 5% 10%;
+}
+
+.discription {
+  font-size: 20px;
+}
+
+.APIlink {
+  /* justify-self: center; */
+  color: black;
+  text-decoration: none;
+  background-color: white;
+  margin: 0 30%;
+  padding: 10px 25px 10px 25px;
+  border-radius: 5px;
+  border: 1px solid #33475b;
+}
+
+.APIlink:hover {
+  color: #4caf50;
+}
+
+@media only screen and (max-width: 950px) {
+  .Contaner {
+    grid-template-columns: 100%;
+    max-height: 80%;
+    max-width: 80%;
+    margin: auto;
+  }
+  .image {
+    grid-row: 1;
+  }
+
+  .about_api {
+    text-align: center;
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .APIlink {
+    margin: 0;
+  }
+}

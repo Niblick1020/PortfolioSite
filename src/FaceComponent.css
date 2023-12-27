@@ -2,28 +2,23 @@
 
 .Container {
   position: relative;
-  max-width: 700px;
-  display: flex;
-  flex-direction: column;
+  padding: auto;
   align-items: center;
-  height: 1vh;
 }
 
 .face-image,
 .eyes-image,
 .body-image {
-  position: relative;
   max-width: 100%;
+  position: absolute;
 }
 .face-image {
   z-index: 2;
 }
 .eyes-image {
   z-index: 3;
-  transform: translateY(-101%);
 }
 
 .body-image {
-  z-index: 1;
-  transform: translateY(-210%);
+  transform: translateY(-7%);
 }

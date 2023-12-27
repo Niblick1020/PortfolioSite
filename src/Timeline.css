@@ -1,6 +1,7 @@
 .title {
   font-size: 36px;
   text-align: center;
+  text-shadow: 1px 2px 6px rgba(0, 0, 0, 0.5);
 }
 
 .timeline-box {
@@ -8,4 +9,18 @@
 }
 .phone-description {
   font-size: 20px;
+}
+
+.timeline-container {
+  position: relative; /* Allow positioning of the line */
+}
+
+.timeline-line {
+  position: absolute; /* Position the line independently */
+  top: 0;
+  bottom: 0;
+  left: 50%; /* Adjust as needed to center the line */
+  width: 3px;
+  background-color: #33475b; /* Adjust color as desired */
+  z-index: -1;
 }

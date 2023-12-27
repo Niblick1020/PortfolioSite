@@ -1,0 +1,56 @@
+/* Strengths.css */
+.grid-Cotainer {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+}
+
+.title {
+  font-size: 30px;
+  grid-column: 1 / 5;
+  text-align: center;
+}
+
+/* These are my images */
+.cplus,
+.react,
+.python,
+.pandas {
+  grid-row: 2;
+  max-width: 100%;
+}
+
+.cplus {
+  grid-column: 1;
+}
+.react {
+  grid-column: 2;
+}
+.python {
+  grid-column: 3;
+}
+.pandas {
+  grid-column: 4;
+}
+
+/* These are test under my images */
+.CplusText,
+.reactText,
+.pythonText,
+.pandasText {
+  grid-row: 3;
+  text-align: center;
+  font-size: 26px;
+}
+
+.CplusText {
+  grid-column: 1;
+}
+.reactText {
+  grid-column: 2;
+}
+.pythonText {
+  grid-column: 3;
+}
+.pandasText {
+  grid-column: 4;
+}
