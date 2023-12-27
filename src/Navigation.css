@@ -1,0 +1,65 @@
+/* Navigation.css */
+
+.navbar {
+  background-color: #33475b;
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 23px;
+}
+
+.nav-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-item {
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.nav-item a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.nav-item a:hover {
+  color: #4caf50;
+}
+
+.dropdown-container {
+  background-color: #33475b;
+  font-size: 23px;
+  overflow: hidden;
+}
+
+.dropdown-list {
+  background-color: #33475b;
+  padding: 0;
+  list-style-type: none;
+  top: 100%;
+  z-index: 1;
+}
+
+.dropdown-container button {
+  display: block;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 23px;
+}
+
+.dropdown-container button:hover {
+  color: #4caf50;
+}

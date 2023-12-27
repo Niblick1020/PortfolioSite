@@ -1,0 +1,29 @@
+/* FaceComponent.css */
+
+.Container {
+  position: relative;
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 1vh;
+}
+
+.face-image,
+.eyes-image,
+.body-image {
+  position: relative;
+  max-width: 100%;
+}
+.face-image {
+  z-index: 2;
+}
+.eyes-image {
+  z-index: 3;
+  transform: translateY(-101%);
+}
+
+.body-image {
+  z-index: 1;
+  transform: translateY(-210%);
+}
