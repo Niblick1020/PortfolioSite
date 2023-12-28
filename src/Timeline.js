@@ -7,13 +7,11 @@ const experiences = [
     date: "Jun 2019",
     title: "Graduated with an Associates of Arts",
     subTitle: "College of Southern Nevada",
-    description: `In 2017, I embarked on my academic journey at CSN with the aspiration of transferring to UNLV to enroll in 
-      their computer science program. After two years of dedicated efforts, I earned an Associate of Arts 
-      degree from CSN, marking the beginning of my formal education in computer science. During my time at CSN, I 
-      honed my critical thinking skills and laid the foundation for my academic pursuits. I delved into essential 
+    description: `In 2017, I started on my academic journey at CSN with the goal of transferring to UNLV to enroll in 
+      their computer science program. During my time at CSN, I 
+      honed my critical thinking skills and laid the foundation for my academic pursuits. I took many 
       prerequisites for UNLV, such as calculus and computer science 1 and 2, shaping my understanding of the field. 
-      CSN served as a pivotal starting point, fostering the development of my passion for computer science and instilling 
-      in me the skills necessary for success in my future endeavors.`,
+      CSN served as a pivotal starting point, fostering the development of my passion for computer science.`,
   },
   {
     date: "Sep 2019",
@@ -25,9 +23,9 @@ const experiences = [
     date: "Oct 2020",
     title: "Substitute Teacher",
     subTitle: "Clark County School District",
-    description: `As a substitute teacher, I had the opportunity to engage with students across a diverse range of age groups, from Kindergarten to 12th grade. My responsibilities included teaching various subjects, with a focus on math and science.
-I was selected as a long-term substitute teacher for algebra, geometry, and physics classes. In this role, I successfully managed the classroom dynamics and ensured a positive learning environment for students.
-This experience not only sharpened my teaching skills but also reinforced my ability to adapt to different educational settings and foster a conducive atmosphere for learning.
+    description: `As a substitute teacher, I had the opportunity to engage with students across a diverse range of age groups, 
+    from Kindergarten to 12th grade. My responsibilities included teaching various subjects, with a focus on math and science 
+    including my position as a long-term substitute teacher for algebra, geometry, and physics classes.
 `,
   },
   {
@@ -37,19 +35,20 @@ This experience not only sharpened my teaching skills but also reinforced my abi
     description: `
 At SafeNest, I honed my communication and technology skills. I successfully developed and managed an SQL server integrated with our 
 CRM via API, enabling seamless weekly data transfers using Python. Additionally, I crafted a dynamic Power BI report linked to 
-the SQL server for enhanced data visualizations. Python played a crucial role in various applications, including data corrections,
- API calls, data manipulation with pandas (e.g., pivoting, grouping), and web scraping. I optimized grant reporting, reducing the 
- time from ten days to three to four days by creating reports and manipulating data using Excel and Python with pandas.
+ SQL tables for data visualizations. Python played a crucial role in various applications, including data corrections,
+ API calls, data manipulation with pandas (e.g., pivoting, grouping), and web scraping. Another role of my position here was 
+ grant reporting, in which I reduced the time from ten days to three days and increased data quality by implementing data 
+ strategies using Excel and Python with pandas.
     `,
   },
   {
     date: "Dec 2024",
     title: "Bachelors of Science Computer Science",
     subTitle: "University of Nevada Las Vegas",
-    description: `Despite facing numerous challenges, including the impact of COVID, I've dedicated several years to pursuing
-     my computer science degree. The culmination of this journey is my expected graduation, a testament to my resilience and
-      determination to overcome obstacles. I remain steadfast in my commitment to pressing on and achieving my academic goals
-       despite the adversities encountered along the way.`,
+    description: `Despite facing numerous challenges, including the impact of COVID-19, I've devoted several years to pursuing
+     my computer science degree. my resilience and dedication are a testament to my ability to overcome obstacles. I remain 
+     steadfast in my commitment to pressing on and achieving my academic goals despite the adversities encountered along the 
+     way.`,
   },
 ];
 
@@ -150,8 +149,8 @@ const Timeline = () => {
                 boxShadow: "5px 5px 10px rgba(0, 0, 0, 0.2)",
               }}
             >
-              <h3>{experience.title}</h3>
-              <h5>{experience.subTitle}</h5>
+              <h2>{experience.title}</h2>
+              <h4>{experience.subTitle}</h4>
               {/* <div>{experience.description.substring(0, 120)}</div> */}
               <div>{experience.description}</div>
             </div>

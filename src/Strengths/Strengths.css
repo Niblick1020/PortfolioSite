@@ -32,25 +32,52 @@
   grid-column: 4;
 }
 
-/* These are test under my images */
-.CplusText,
-.reactText,
-.pythonText,
-.pandasText {
+/* These are text under my images */
+.CplusTitle,
+.reactTitle,
+.pythonTitle,
+.pandasTitle {
   grid-row: 3;
   text-align: center;
   font-size: 26px;
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.3);
+  font-weight: bolder;
 }
 
-.CplusText {
+.CplusTitle {
   grid-column: 1;
 }
-.reactText {
+.reactTitle {
   grid-column: 2;
 }
-.pythonText {
+.pythonTitle {
   grid-column: 3;
 }
-.pandasText {
+.pandasTitle {
+  grid-column: 4;
+}
+
+/* These are text under my images */
+.CplusTime,
+.reactTime,
+.pythonTime,
+.pandasTime {
+  grid-row: 4;
+  text-align: center;
+  font-size: 24px;
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.3);
+  font-weight: 100;
+}
+
+.CplusTime {
+  grid-column: 1;
+}
+.reactTime {
+  grid-column: 2;
+}
+.pythonTime {
+  grid-column: 3;
+}
+.pandasTime {
   grid-column: 4;
 }

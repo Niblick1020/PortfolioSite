@@ -22,10 +22,8 @@ const Project = () => {
           <p className="discription">
             The API project involves creating a secure API key generator and
             demonstrating the integration of an API for retrieving relevant
-            data, with a focus on establishing a connection between a Customer
-            Relationship Management (CRM) system and a Microsoft SQL Server. The
-            project also includes data compilation, transformation, and
-            uploading to a SQL Server table, as well as showcasing the final
+            data. The project also includes data compilation, transformation,
+            and uploading to a SQL Server table, as well as showcasing the final
             output in PowerBI with a visual representation of sales data.
           </p>
           <Link to="/api" className="APIlink">

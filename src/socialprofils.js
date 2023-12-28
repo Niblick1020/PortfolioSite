@@ -15,9 +15,7 @@ import {
 
 const socialprofils = {
   github: "https://github.com",
-  facebook: "https://facebook.com",
   linkedin: "https://www.linkedin.com/in/sebastianbgomez",
-  twitter: "https://twitter.com",
 };
 
 export const Socialicons = (params) => {

@@ -2,6 +2,9 @@
 import React, { useEffect } from "react";
 import "./TypingComponent.css";
 
+const aboutMessage = `
+Welcome to my portfolio! I'm a dedicated Computer science student and Data Specialist based in Las Vegas, NV.`;
+
 const TypingComponent = () => {
   useEffect(() => {
     const stringArray = [
@@ -73,11 +76,7 @@ const TypingComponent = () => {
     <div>
       <p className="hook">Hi, I’m Sebastian Gomez!</p>
       <p className="Typing_animation" id="demo"></p>
-      <p className="Paragraph">
-        Welcome! I'm a dedicated Data Integrity Specialist based in Las Vegas,
-        NV. With a rich background in software and data management, I've
-        accumulated valuable experience over the past 2 years.
-      </p>
+      <p className="Paragraph">{aboutMessage}</p>
     </div>
   );
 };
