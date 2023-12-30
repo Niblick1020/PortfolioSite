@@ -81,3 +81,53 @@
 .pandasTime {
   grid-column: 4;
 }
+
+@media only screen and (max-width: 768px) {
+  .grid-Cotainer {
+    grid-template-columns: 50% 50%;
+  }
+
+  .react,
+  .reactTitle,
+  .reactTime,
+  .cplus,
+  .CplusTime,
+  .CplusTitle {
+    grid-column: 1;
+  }
+
+  .pandas,
+  .pandasTime,
+  .pandasTitle,
+  .python,
+  .pythonTime,
+  .pythonTitle {
+    grid-column: 2;
+  }
+
+  .react,
+  .pandas {
+    grid-row: 1;
+  }
+  .reactTitle,
+  .pandasTitle {
+    grid-row: 2;
+  }
+
+  .reactTime,
+  .pandasTime {
+    grid-row: 3;
+  }
+  .cplus,
+  .python {
+    grid-row: 4;
+  }
+  .CplusTitle,
+  .pythonTitle {
+    grid-row: 5;
+  }
+  .CplusTime,
+  .pythonTime {
+    grid-row: 6;
+  }
+}
