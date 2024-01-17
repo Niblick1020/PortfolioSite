@@ -1,7 +1,8 @@
 {
   "files": {
-    "main.css": "/static/css/main.31181f4d.css",
-    "main.js": "/static/js/main.13fe7ceb.js",
+    "main.css": "/static/css/main.70d67b96.css",
+    "main.js": "/static/js/main.b55ac64e.js",
+    "static/media/Chicken_Project.gif": "/static/media/Chicken_Project.7c8646d1a859580de74b.gif",
     "static/media/API_Project.gif": "/static/media/API_Project.6e8fd036d1409f2f75e8.gif",
     "static/media/react_logo.png": "/static/media/react_logo.8eee2875cd643bd8681b.png",
     "static/media/python.png": "/static/media/python.1a00f9131d554e8e6b2f.png",
@@ -9,11 +10,11 @@
     "static/media/Body.png": "/static/media/Body.2998245386d6da323b69.png",
     "static/media/C++_logo.png": "/static/media/C++_logo.07f893a35c65f265fce7.png",
     "index.html": "/index.html",
-    "main.31181f4d.css.map": "/static/css/main.31181f4d.css.map",
-    "main.13fe7ceb.js.map": "/static/js/main.13fe7ceb.js.map"
+    "main.70d67b96.css.map": "/static/css/main.70d67b96.css.map",
+    "main.b55ac64e.js.map": "/static/js/main.b55ac64e.js.map"
   },
   "entrypoints": [
-    "static/css/main.31181f4d.css",
-    "static/js/main.13fe7ceb.js"
+    "static/css/main.70d67b96.css",
+    "static/js/main.b55ac64e.js"
   ]
 }
