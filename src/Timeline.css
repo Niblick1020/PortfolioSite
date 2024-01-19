@@ -6,13 +6,16 @@
 
 .timeline-box {
   padding: 10% 20px 100px 20px;
+  /* z-index: -2; */
 }
 .phone-description {
   font-size: 20px;
+  /* z-index: -2; */
 }
 
 .timeline-container {
   position: relative; /* Allow positioning of the line */
+  z-index: -2;
 }
 
 .timeline-line {
@@ -22,5 +25,5 @@
   left: 50%; /* Adjust as needed to center the line */
   width: 3px;
   background-color: #33475b; /* Adjust color as desired */
-  z-index: -1;
+  z-index: -3;
 }

@@ -1,65 +1,115 @@
-/* Navigation.css */
-
-.navbar {
-  background-color: #33475b;
-  overflow: hidden;
+/* Wide Screen View */
+.topnav {
   position: fixed;
+  background-color: #33475b;
   width: 100%;
-  z-index: 1000;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  font-size: 23px;
 }
 
-.nav-list {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-}
-
-.nav-item {
-  margin-right: 20px;
+.topnav .a {
+  float: left;
   cursor: pointer;
-}
-
-.nav-item a {
-  display: block;
-  color: white;
   text-align: center;
-  padding: 14px 16px;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 25px 30px;
   text-decoration: none;
+  font-size: 20px;
 }
 
-.nav-item a:hover {
+.topnav .a:hover {
   color: #4caf50;
 }
 
-.dropdown-container {
-  background-color: #33475b;
-  font-size: 23px;
-  overflow: hidden;
-}
-
-.dropdown-list {
-  background-color: #33475b;
-  padding: 0;
-  list-style-type: none;
-  top: 100%;
-  z-index: 1;
-}
-
-.dropdown-container button {
-  display: block;
+.topnav .a.split {
+  background-color: #4caf50;
   color: white;
-  text-align: center;
-  text-decoration: none;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  font-size: 23px;
+  float: right;
 }
 
-.dropdown-container button:hover {
+/* Short Screen View */
+
+/* Button */
+.container {
+  position: fixed;
+  display: inline-block;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  z-index: 4;
+  width: 35px;
+  height: 5px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.change .bar1 {
+  transform: translate(0, 11px) rotate(-45deg);
+  background-color: #4caf50;
+}
+
+.change .bar2 {
+  opacity: 0;
+}
+
+.change .bar3 {
+  transform: translate(0, -11px) rotate(45deg);
+  background-color: #4caf50;
+}
+
+/* Full Panel */
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  background-color: #33475b;
+  opacity: 0.99;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  text-align: center;
+}
+
+.sidenav .a {
+  padding: 8px 8px 8px 8px;
+  text-decoration: none;
+  font-size: 30px;
+  margin: 15px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav .a:hover {
   color: #4caf50;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.sidenav .resumephone {
+  background-color: #4caf50;
+  font-size: 30px;
+  color: white;
+  border: #4caf50;
+  border-radius: 15px;
+  max-width: 175px;
+  text-align: center;
+  margin: auto;
+}
+
+.sidenav .resumephone:hover {
+  color: black;
 }

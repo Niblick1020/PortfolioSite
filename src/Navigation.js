@@ -2,64 +2,21 @@
 
 import React, { useState, useEffect, useRef } from "react";
 import { Link as ScrollLink } from "react-scroll";
-
+import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 
 import "./Navigation.css";
 
-const animateDropdown = (
-  targetHeight,
-  dropdownListRef,
-  setDropdownHeight,
-  setIsAnimating
-) => {
-  const animationLoop = () => {
-    if (!dropdownListRef.current) {
-      return;
-    }
-
-    const step = Math.max(
-      1,
-      Math.abs(targetHeight - dropdownListRef.current.offsetHeight) / 10
-    );
-
-    const newHeight =
-      dropdownListRef.current.offsetHeight +
-      (targetHeight > dropdownListRef.current.offsetHeight ? step : -step);
-    setDropdownHeight(newHeight);
-    console.log(newHeight);
-    console.log(targetHeight);
-    if (newHeight !== targetHeight) {
-      requestAnimationFrame(animationLoop); // Continue animating until target reached
-    } else {
-      setIsAnimating(false); // Animation complete
-    }
-  };
-
-  requestAnimationFrame(animationLoop);
-};
-
 const Navigation = () => {
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const [dropdownHeight, setDropdownHeight] = useState(20);
-  const [isAnimating, setIsAnimating] = useState(false);
-  const dropdownListRef = useRef(null);
+  const [isPhone, setIsPhone] = useState(false);
+  const [toggle, settoggle] = useState(false);
+  const toggleButtonRef = useRef(null);
 
-  const toggleDropdown = () => {
-    console.log("animating dropdown");
-    setIsAnimating(true);
-    const targetHeight = dropdownHeight === 20 ? 270 : 20; // Determine target height
-    animateDropdown(
-      targetHeight,
-      dropdownListRef,
-      setDropdownHeight,
-      setIsAnimating
-    );
-  };
+  // const navigate = useNavigate();
 
   useEffect(() => {
     const handleResize = () => {
-      setIsDropdownOpen(window.innerWidth <= 768);
+      setIsPhone(window.innerWidth <= 850);
     };
 
     window.addEventListener("resize", handleResize);
@@ -69,101 +26,130 @@ const Navigation = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  console.log(isDropdownOpen);
+  console.log(isPhone);
 
-  return isDropdownOpen ? (
-    <nav className="navbar">
-      <div className="dropdown-container">
-        <ul
-          style={{ height: dropdownHeight, listStyleType: "none" }}
-          ref={dropdownListRef}
+  function myFunction(event) {
+    event.currentTarget.classList.toggle("change");
+
+    // here is where we toggle the menu options in phone view
+    if (toggle) {
+      closeNav();
+      settoggle(false);
+    } else {
+      openNav();
+      settoggle(true);
+    }
+  }
+
+  function handleMenuOptionClick() {
+    closeNav();
+    settoggle(false); // Resets the toggle state
+    if (toggleButtonRef.current) {
+      toggleButtonRef.current.classList.toggle("change", false);
+    }
+  }
+
+  function openNav() {
+    document.getElementById("mySidenav").style.width = "100%";
+  }
+
+  function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+  }
+
+  return (
+    <>
+      {isPhone ? (
+        <div
+          className="container"
+          onClick={(event) => myFunction(event)}
+          ref={toggleButtonRef}
         >
-          <button className="menu-button" onClick={toggleDropdown}>
-            Menu
-          </button>
-          <li className="nav-item">
+          <div className="bar1"></div>
+          <div className="bar2"></div>
+          <div className="bar3"></div>
+          <div id="mySidenav" class="sidenav">
             <ScrollLink
+              onClick={handleMenuOptionClick}
+              className="a"
               to="home"
               smooth={true}
               duration={500}
-              onClick={toggleDropdown}
             >
               HOME
             </ScrollLink>
-          </li>
-          <li className="nav-item">
             <ScrollLink
+              onClick={handleMenuOptionClick}
+              className="a"
               to="timeline"
               smooth={true}
               duration={500}
-              onClick={toggleDropdown}
             >
               TIMELINE
             </ScrollLink>
-          </li>
-          {/* <li className="nav-item">
             <ScrollLink
+              onClick={handleMenuOptionClick}
+              className="a"
               to="SERVICES"
               smooth={true}
               duration={500}
-              onClick={toggleDropdown}
             >
               SERVICES
             </ScrollLink>
-          </li> */}
-          <li className="nav-item">
             <ScrollLink
+              onClick={handleMenuOptionClick}
+              className="a"
               to="PROJECTS"
               smooth={true}
               duration={500}
-              onClick={toggleDropdown}
             >
               PROJECTS
             </ScrollLink>
-          </li>
-          <li className="nav-item">
             <ScrollLink
+              onClick={handleMenuOptionClick}
+              className="a"
               to="CONTACT"
               smooth={true}
               duration={500}
-              onClick={toggleDropdown}
             >
               CONTACT
             </ScrollLink>
-          </li>
-        </ul>
-      </div>
-    </nav>
-  ) : (
-    <nav className="navbar">
-      <ul className="nav-list">
-        <li className="nav-item">
-          <ScrollLink to="home" smooth={true} duration={500}>
-            <Link to="/">HOME</Link>
+            <a
+              href="/Redacted_Resume_Jan-2024.pdf"
+              className="resumephone a"
+              download="Redacted_Resume_Jan-2024.pdf"
+            >
+              Resume
+            </a>
+          </div>
+        </div>
+      ) : (
+        <div className="topnav">
+          <ScrollLink className="a" to="home" smooth={true} duration={500}>
+            HOME
           </ScrollLink>
-        </li>
-        <li className="nav-item">
-          <ScrollLink to="timeline" smooth={true} duration={500}>
-            <Link to="/">TIMELINE</Link>
+          <ScrollLink className="a" to="timeline" smooth={true} duration={500}>
+            TIMELINE
           </ScrollLink>
-        </li>
-        {/* <li className="nav-item">
-          <ScrollLink to="SERVICES" smooth={true} duration={500}>
+          <ScrollLink className="a" to="SERVICES" smooth={true} duration={500}>
             SERVICES
           </ScrollLink>
-        </li> */}
-        <li className="nav-item">
-          <ScrollLink to="PROJECTS" smooth={true} duration={500}>
-            <Link to="/">PROJECTS</Link>
+          <ScrollLink className="a" to="PROJECTS" smooth={true} duration={500}>
+            PROJECTS
           </ScrollLink>
-        </li>
-        <li className="nav-item">
-          <ScrollLink to="CONTACT" smooth={true} duration={500}>
-            <Link to="/">CONTACT</Link>
+          <ScrollLink className="a" to="CONTACT" smooth={true} duration={500}>
+            CONTACT
           </ScrollLink>
-        </li>
-      </ul>
-    </nav>
+          <a
+            href="/Redacted_Resume_Jan-2024.pdf"
+            className="split a"
+            download="Redacted_Resume_Jan-2024.pdf"
+          >
+            Resume
+          </a>
+        </div>
+      )}
+    </>
   );
 };
 export default Navigation;
