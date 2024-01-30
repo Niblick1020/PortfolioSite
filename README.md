@@ -1,33 +1,51 @@
-# Getting Started with Create React App
+# Sebastian Gomez Portfolio Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
+Welcome to the repository for my portfolio site, hosted at [www.sebastianbgomez.com](https://www.sebastianbgomez.com). This project was created using Create React App.
 
 In the project directory, you can run:
 
-### `npm start`
+## Preview
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Desktop Version
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+![Desktop Version](public/Desktop_Portfolio.gif)
 
-### `npm run build`
+### Mobile Version
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![Mobile Version](public/Phone_Portfolio.gif)
 
 ### To Download Repository
 
-### `git clone https://github.com/Niblick1020/PortfolioSite.git`
+```bash
+git clone https://github.com/Niblick1020/PortfolioSite.git
+cd PortfolioSite
+npm install
+npm start
+```
 
-### To Download Node modules
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-### `npm install`
+### To host your own site on GitHub
+
+Run the following command in your project directory to install the gh-pages package, which simplifies the deployment process to GitHub Pages
+
+```bash
+cd PortfolioSite
+npm install --save gh-pages
+```
+
+Add the following scripts and homepage field to your package.json file
+
+```json
+"homepage": "https://<username>.github.io/<repository-name>",
+"scripts": {
+  "predeploy": "npm run build",
+  "deploy": "gh-pages -d build"
+}
+```
+
+Deploy Your Site
+
+```bash
+npm run deploy
+```
