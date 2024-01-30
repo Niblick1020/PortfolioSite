@@ -14,7 +14,7 @@ In the project directory, you can run:
 
 ![Mobile Version](./Phone_Portfolio.gif)
 
-### To Download Repository
+## To Download Repository
 
 ```bash
 git clone https://github.com/Niblick1020/PortfolioSite.git
@@ -25,7 +25,7 @@ npm start
 
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-### To host your own site on GitHub
+## To host your own site on GitHub
 
 Run the following command in your project directory to install the gh-pages package, which simplifies the deployment process to GitHub Pages
 
