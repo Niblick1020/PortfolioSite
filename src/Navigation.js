@@ -47,6 +47,12 @@ const Navigation = () => {
     if (toggleButtonRef.current) {
       toggleButtonRef.current.classList.toggle("change", false);
     }
+    if (window.gtag) {
+      window.gtag("event", "select_content", {
+        content_type: "navigation",
+        item_id: "some_identifier_here",
+      });
+    }
   }
 
   function openNav() {

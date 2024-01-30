@@ -9,8 +9,10 @@ import Strengths from "./Strengths/Strengths";
 import Projects from "./Projects/Projects";
 import { ContactUs } from "./contact/Contact";
 import Navigation from "./Navigation";
+import useAnalytics from "./useAnalytics";
 
 const Home = () => {
+  useAnalytics();
   return (
     <section className="grid-container" id="home">
       <Navigation />
