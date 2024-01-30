@@ -8,11 +8,11 @@ In the project directory, you can run:
 
 ### Desktop Version
 
-![Desktop Version](public/Desktop_Portfolio.gif)
+![Desktop Version](Desktop_Portfolio.gif)
 
 ### Mobile Version
 
-![Mobile Version](public/Phone_Portfolio.gif)
+![Mobile Version](./Phone_Portfolio.gif)
 
 ### To Download Repository
 
